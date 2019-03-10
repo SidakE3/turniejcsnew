@@ -13,6 +13,12 @@ const playerReducer = (state = initState, action) => {
         case 'DELETE_PLAYER_ERROR':
         console.log('delete nie udaned', action.err)
         return state
+        case 'VERIFY_CHANGE':
+        console.log('change udaned')
+        return state
+        case 'VERIFY_CHANGE_ERROR':
+        console.log('change nie udaned', action.err)
+        return state
         default:
         return state;
         

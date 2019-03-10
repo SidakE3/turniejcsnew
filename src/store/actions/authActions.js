@@ -33,11 +33,16 @@ export const signUp = (newUser) => {
             newUser.LoginFormEmail,
             newUser.LoginFormPassword
         ).then((resp) => {
-            return firestore.collection('users').doc(resp.user.uid).set({
+            return (firestore.collection('users').doc(resp.user.uid).set({
                 captain: newUser.LoginFormCaptainName,
                 teamName: newUser.LoginFormTeamName,
                 email: newUser.LoginFormEmail
+            }),
+            firestore.collection('teams').doc(resp.user.uid).set({
+                captainName: newUser.LoginFormCaptainName,
+                teamName: newUser.LoginFormTeamName
             })
+        )
         }).then(() => {
             dispatch({ type: 'SIGNUP_SUCCESS'})
         }).catch((err) => {

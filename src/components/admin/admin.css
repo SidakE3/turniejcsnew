@@ -7,14 +7,27 @@ body{
     max-width: 500px;
     padding: 20px;
 }
-.player-info {
+.admin-teams {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
-.player-delete{
+.adminSummary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 60px;
+}
+.admin-delete{
     display: flex;
     align-items: center;
     justify-content: center;
     color: red;
     font-size: 25px;
+}
+.switch-container {
+	position: absolute;
+	top: 50%; left: 50%;
+	-webkit-transform: translate3d( -50%, -50%, 0 );
+	transform: translate3d( -50%, -50%, 0 );
 }

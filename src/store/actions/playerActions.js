@@ -29,3 +29,18 @@ export const deletePlayer = (player) => {
         })
     }
 }
+
+export const verifyTeam = (team) => {
+    return(dispatch, getState,{getFirebase,getFirestore}) => {
+        const firestore= getFirestore();
+        const teamId = team.id
+        const verifyState = team.verify
+        firestore.collection('users').doc(teamId).set({
+            verify: verifyState
+        }).then(() => {
+            dispatch({type: 'VERIFY_CHANGE', team})
+        }).catch((err) => {
+            dispatch({ type: 'VERIFY_CHANGE_ERROR', err})
+        })
+    }
+}

@@ -16,12 +16,12 @@ class AdminDashboard extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-6 col-s12">
+          <div className="col-md-6 col-sm-12">
           <h3 className="mt-5">Drużyny</h3>
             <AdminTeams players={players} auth={auth} users={users}/>
           </div>
-          <div className="col-6 col-s12">
-            <h3 className="mt-5">Informacje</h3>
+          <div className="col-md-6 col-sm-12">
+            <h3 className="mt-5">Mecze</h3>
             <AdminInfo />
           </div>
         </div>        
