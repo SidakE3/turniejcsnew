@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header{
+    height: 70vh;
+    background-image: url('header.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+.headerContent{
+    padding: 40px;
+    background: rgba(5, 11, 20,.2);
+    color:#fff;
+}
+.rules{
+    height: 50vh;
+    background-image: url('./img/rules.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+.rulesContent{
+    padding: 40px;
+    background: rgba(5, 11, 20,.2);
+    color:#fff;
+}
+.hello{
+    padding: 20px;
+    text-align: center;
+}
+.formContent{
+    max-width: 500px;
+    padding: 20px;
+}
+.player-info {
+    display: flex;
+    flex-direction: row;
+}
+.player-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 25px;
+}
+.sponsors-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.sponsors-container img{
+    padding: 30px;
+    max-width: 160px;
+}
