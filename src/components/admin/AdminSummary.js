@@ -21,7 +21,7 @@ class PlayerSummary extends Component {
     const {player} = this.props;
   return (
     <div className="card adminSummary  w-100">
-          <p className="m-0">Nick: {player.player}</p>
+          <p className="m-0 ml-3">Nick: {player.player}</p>
             <div className="card-footer admin-delete">
                 <button className="btn" onClick={() => {if(window.confirm(`Czy jesteś pewien, że chcesz usunąć gracza o nicku ${player.player}`)) {this.handldeDelete(player.id)}}}><i className="fas fa-times"></i></button>
             </div>

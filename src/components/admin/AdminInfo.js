@@ -1,18 +1,45 @@
-import React from 'react'
+import React,{Component} from 'react'
+import Modal from 'react-responsive-modal';
+import AdminMatches from './AdminMatches'
+import AdminMatchesAdd from './AdminMatchesAdd';
 
-const AdminInfo = () => {
+
+class AdminInfo extends Component{
+  state = {
+    open: false
+  }
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+ 
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+
+  render(){
+    const { open } = this.state;
+    const { users, matches } = this.props
+
+
   return (
-     <div>
-        <div className="card mt-2">
-            <div className="card-body">
-            <button className="btn btn-success">Dodaj mecz</button>
-                <p className="m-0">Następny mecz z: </p>
+     <div>  <button className="btn btn-success " onClick={this.onOpenModal}>Dodaj mecz</button>
+            {matches && matches.map(match=>{
+              return <AdminMatches match={match}/> 
+            })}
+            
+
+            <Modal open={open} onClose={this.onCloseModal} center>
+            <div className="d-flex flex-column">
+              <h4>Dodaj gracza</h4>
+              <p>Wybierz drużyny oraz czas w którm zostanie rozegrany mecz kwalifikacyjny</p>
+              <AdminMatchesAdd users={users}/>
             </div>
-            <div className="card-footer">O godzinie 00:00</div>
-        </div>
+            </Modal>
+        
 
     </div>
   )
 }
-
+}
 export default AdminInfo

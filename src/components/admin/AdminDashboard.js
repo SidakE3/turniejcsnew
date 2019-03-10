@@ -9,7 +9,7 @@ import { Redirect } from 'react-router-dom'
 class AdminDashboard extends Component {
   render() {
 
-    const { players, auth, users } = this.props;
+    const { players, auth, users, matches } = this.props;
    
     if (!auth.uid) return <Redirect to='/signin' />
     
@@ -18,11 +18,11 @@ class AdminDashboard extends Component {
         <div className="row">
           <div className="col-md-6 col-sm-12">
           <h3 className="mt-5">Drużyny</h3>
-            <AdminTeams players={players} auth={auth} users={users}/>
+            <AdminTeams players={players} auth={auth} users={users} />
           </div>
           <div className="col-md-6 col-sm-12">
             <h3 className="mt-5">Mecze</h3>
-            <AdminInfo />
+            <AdminInfo players={players} auth={auth} users={users} matches={matches}/>
           </div>
         </div>        
       </div>
@@ -35,7 +35,8 @@ const mapStateToProps = (state) => {
   return {
     players: state.firestore.ordered.players,
     auth: state.firebase.auth,
-    users: state.firestore.ordered.users
+    users: state.firestore.ordered.users,
+    matches: state.firestore.ordered.matches
   }
 }
 
@@ -43,6 +44,7 @@ export default compose(
   connect(mapStateToProps),
   firestoreConnect([
     { collection: 'players'},
-    { collection: 'users'}
+    { collection: 'users'},
+    { collection: 'matches'}
   ])
 )(AdminDashboard)
