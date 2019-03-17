@@ -30,7 +30,7 @@ class AdminInfo extends Component{
             
 
             <Modal open={open} onClose={this.onCloseModal} center>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column text-dark">
               <h4>Dodaj gracza</h4>
               <p>Wybierz drużyny oraz czas w którm zostanie rozegrany mecz kwalifikacyjny</p>
               <AdminMatchesAdd users={users}/>

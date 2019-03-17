@@ -1,0 +1,59 @@
+@media only screen and (max-width: 1100px) { /** Tablety **/
+  header {
+    height: 50vh;
+  }
+  header .center {
+    padding-top: 15vh;
+  }
+  #stage {
+    height: 40%;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  /* .zapisy .box1 {
+    width: 40%;
+  }
+  .zapisy .box2 {
+    width: 53%;
+  }
+   */
+}
+@media only screen and (max-width: 450px) { /** telefony **/
+  nav {
+    display: none;
+  }
+  #stage {
+    display: none;
+  }
+  header .center {
+    padding-top: 15vh;
+    width: 100%;
+  }
+  header .center h1 {
+    font-size: 60px;
+  }
+  header .center h2 {
+    font-size: 30px;
+  }
+  .turniej .col-sm {
+    margin-bottom: 40px;
+  }
+  /* .zapisy .box1 {
+    width: 100%;
+  }
+  .zapisy .box2 {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .zapisy .box input {
+    width: 100%;
+  } */
+  .turniej {
+    margin-top: 100px;
+  }
+  .faq {
+    margin-top: 100px;
+  }
+
+}

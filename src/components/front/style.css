@@ -1,20 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-header{
-    height: 70vh;
-    background-image: url('header.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction:column;
-}
 .headerContent{
     padding: 40px;
     background: rgba(5, 11, 20,.2);

@@ -28,7 +28,7 @@ class AdminMatchesDetalis extends Component {
   render() {
       const { match } = this.props
     return (
-      <div className="container">
+      <div className="container text-dark">
         <form onSubmit={this.handleSubmit(match.id)}> 
             <label htmlFor="team1">{match.team1}</label>
             <input type="text" id="team1Result" name="team1Result" onChange={this.handleChange} placeholder={match.team1Result}/>

@@ -1,8 +1,10 @@
-import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
-import SignedInLinks from './SignedInLinks'
-import SignedOutLinks from './SignedOutLinks'
-import { connect } from 'react-redux' 
+import React, {Component} from 'react';
+import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
+import { connect } from 'react-redux' ;
+import { compose } from 'redux'
+import HomeLinks from './HomeLinks';
+import { withRouter } from 'react-router-dom';
 
 class Navbar extends Component {
     
@@ -21,7 +23,6 @@ class Navbar extends Component {
     
     render() {
     const { auth,profile } = this.props;
-    console.log(auth)
     const collapsed = this.state.collapsed;
     const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
     const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
@@ -30,15 +31,17 @@ class Navbar extends Component {
     return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark transparent-nav">
         <div className="container">
-            <Link to="/" className="navbar-brand" >Turniej CSGO PZS3</Link>
+            
                 <button onClick={this.toggleNavbar} className={`${classTwo}`} type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
                 </button>
             <div className={`${classOne}`} id="navbarResponsive">
-                { links }
+            {this.props.location.pathname === "/" ? <HomeLinks /> : <div className="authlinks">{links}</div>}
             </div>
         </div>
     </nav>
+    
+    
     );
     }
     }
@@ -51,4 +54,9 @@ class Navbar extends Component {
         }
     }
 
-   export default connect(mapStateToProps)(Navbar);
+   export default compose(
+       withRouter,
+       connect(mapStateToProps)
+   )(Navbar);
+
+ 

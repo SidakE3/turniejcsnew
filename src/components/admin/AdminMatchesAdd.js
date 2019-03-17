@@ -24,7 +24,7 @@ class AdminMatchesAdd extends Component {
   render() {
       const { users } = this.props
     return (
-      <div className="container">
+      <div className="container text-dark">
       <form onSubmit={this.handleSubmit}>
       <select name="team1" id="team1" value={this.state.value} onChange={this.handleChange}>
           <option>Wybierz opcje</option>

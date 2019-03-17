@@ -42,7 +42,7 @@ class AdminList extends Component{
 
   const {user,players} = this.props
   return (
-    <div className="w-100">
+    <div className="w-100 text-dark">
       {console.log(user.id)}
       <div className="card">
       <div className="card-title">

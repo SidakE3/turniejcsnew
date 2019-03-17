@@ -2,6 +2,9 @@ body{
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1d1d1d;
+    color: #fff;
 }
 .formContent{
     max-width: 500px;
@@ -10,6 +13,7 @@ body{
 .admin-teams {
     display: flex;
     flex-direction: column;
+    color: #fff;
 }
 .adminSummary{
     display: flex;

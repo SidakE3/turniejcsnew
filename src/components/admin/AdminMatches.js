@@ -32,7 +32,7 @@ class AdminMatches extends Component {
     const { match } = this.props
     return (
       
-      <div className="card mt-2">
+      <div className="card mt-2 text-dark">
             <div className="card-body">
               {console.log(match)}
                 <p className="m-0">{match.team1} vs {match.team2}</p> 
