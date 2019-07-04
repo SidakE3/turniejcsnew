@@ -23,7 +23,7 @@ class Dashboard extends Component {
           </div>
           <div className="col-6 col-s12">
             <h3 className="mt-5">Informacje</h3>
-            <PlayerInfo />
+            <PlayerInfo/>
           </div>
         </div>        
       </div>
@@ -32,7 +32,6 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     players: state.firestore.ordered.players,
     profile: state.firebase.profile.admin,

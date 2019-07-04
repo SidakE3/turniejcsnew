@@ -39,7 +39,7 @@ import { compose } from 'redux'
     <div className="container mt-5 w-25">
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
-            <label htmlFor="exampleInputEmail">Nick gracza</label>
+            <label htmlFor="player">Nick gracza</label>
             <input type="text" className="form-control" id="player" aria-describedby="addPlayer" placeholder="Dodaj gracza" onChange={this.handleChange} required/> 
         </div>
         <button type="submit" className="btn btn-primary">Dodaj</button>
@@ -51,7 +51,6 @@ import { compose } from 'redux'
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile.admin,

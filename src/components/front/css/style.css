@@ -91,12 +91,13 @@ nav #logo{
   text-align: left;
   font-size: 40px;
   font-weight: bold;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .zapisy .box1 {
   color:#717171;
   font-size: 1.2rem;
-  text-align: justify
+  text-align: justify;
+  padding: 0;
 }
 .btn-box{
   width: 40vw;
@@ -118,22 +119,21 @@ nav #logo{
   padding-bottom: 8px;
   font-family: 'Roboto', sans-serif;
 }
-
 .turniej {
   width: 100%;
   height: auto;
-  margin-top: 150px;
+  margin-top: 100px;
   font-family: 'Roboto', sans-serif;
 }
 .turniej h1 {
   font-size: 40px;
   font-family: 'Fjalla One', sans-serif;
   color: #fff;
+  text-align: left;
 }
 .turniej p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   padding-top: 10px;
   color: #717171;
   text-align: justify;
@@ -141,11 +141,45 @@ nav #logo{
 .faq {
   margin-top: 200px;
 }
+#wojtek{
+  margin-top:150px;
+}
+.wojtek-content{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+#wojtek img{
+  margin-top:100px;
+  height: 350px;
+}
+#wojtek h1{
+  text-align: left;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
+}
+#wojtek h2{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  margin-top:50px;
+}
+#wojtek p{
+  font-size: 20px;
+  line-height: 23px;
+  color: #8f8f8f;
+}
 .faq h1 {
   text-align: left;
   font-size: 40px;
   font-weight: bold;
   font-family: 'Fjalla One', sans-serif;
+}
+.accordion-item p {
+  color: #9b9b9b
 }
 .faq .accordion {
   padding-top: 20px;
@@ -179,7 +213,7 @@ nav #logo{
   padding: 10px;
 }
 .sponsors {
-  margin-top: 200px;
+  margin:150px 0 200px 0;
 }
 .sponsors h1 {
   text-align: left;
@@ -189,14 +223,19 @@ nav #logo{
 }
 footer {
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: #171717;
   margin-top: 100px;
 }
 footer p {
-  padding-top: 18px;
+  padding: 18px;
   font-size: 14px;
   color: #585858;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+.sponsor-img{
+  height: 150px;
+  padding: 40px;
+}
+

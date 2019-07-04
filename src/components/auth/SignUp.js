@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signUp } from '../../store/actions/authActions' 
 
-
 class SignUp extends Component {
     state = {
         LoginFormEmail: '',
@@ -51,8 +50,10 @@ class SignUp extends Component {
                         <label htmlFor="LoginFormPassword">Hasło</label>
                         <input type="password" id="LoginFormPassword" name="LoginFormPassword" className="form-control" required onChange={this.handleChange}/>
                     </div>
-
-                    <button className="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                    <div className="md-form mt-3">
+                        <p><input type="checkbox" name="terms" required/> Akcteptuję <a href='./Regulamin.pdf' download><u>regulamin</u></a></p>
+                    </div>
+                    <button className="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Rejestracja</button>
                     <div className="text-danger">
                         { authError ? <p>{ authError }</p> : null} 
                     </div>

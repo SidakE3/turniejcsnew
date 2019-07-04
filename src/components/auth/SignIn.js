@@ -41,7 +41,7 @@ import { Redirect } from 'react-router-dom'
                         
                     </div>
 
-                    <button className="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                    <button className="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Logowanie</button>
                     <div className="text-danger">
                         { authError ? <p>{ authError }</p> : null} 
                     </div>

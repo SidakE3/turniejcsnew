@@ -31,7 +31,6 @@ class AdminDashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     players: state.firestore.ordered.players,
     auth: state.firebase.auth,

@@ -20,7 +20,7 @@ class PlayerSummary extends Component {
     const {player} = this.props;
   return (
     <div>
-    <div className="card mt-2 player-info">
+    <div className="card mt-2 player-info text-dark">
             <div className="card-body">
                 <p className="m-0">Nick: {player.player}</p>
             </div>

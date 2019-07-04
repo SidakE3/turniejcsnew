@@ -12,7 +12,6 @@ class App extends Component {
   render() {
     const url = window.location.href
     const pathname = new URL(url).pathname;
-    console.log(this.props)
     return (
       <BrowserRouter>
       <div className="App">
